@@ -11,14 +11,18 @@
 <script>
 export default {
     name:'Item',
+    //声明接收
     props:['matter','checkMatter','deleteMatter'],
     methods: {
       //勾选或取消勾选
       handleCheck(id){
+        //通知App组件将对应的matter对象的done值取反
         this.checkMatter(id)
       },
+      //删除
       handleDelete(id){
         if(confirm('真的要删除吗')){
+          //通知App组件将对应的matter对象删除
           this.deleteMatter(id)
         }
       }

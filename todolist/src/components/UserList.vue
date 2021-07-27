@@ -16,6 +16,7 @@ import Item from './Item.vue'
 export default {
     name:'UserList',
     components:{Item},
+    //声明接收App传递过来的数据，其中matter是自己用的，其他是给子组件用的
     props:['matters','checkMatter','deleteMatter']
 }
 </script>

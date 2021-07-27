@@ -45,17 +45,18 @@ export default {
         return matter.id !==id
       })
     },
+    //全选or取消全选
     checkAllMatter(done){
       this.matters.forEach((matter)=>{
         matter.done = done
       })
     },
+    //清除所有已完成的matter
     clearAllmatter(){
       this.matters=this.matters.filter((matter)=>{
         return !matter.done
       })
     }
-    //
   },
 }
 </script>

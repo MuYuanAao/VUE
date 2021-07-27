@@ -8,17 +8,23 @@
 import {nanoid} from 'nanoid'
 export default {
     name:'UserHeader',
+    //接收从App传递过来的addmatter
     props:['addMatter'],
     data() {
         return {
+            //收集用户输入的title
             title:''
         }
     },
     methods: {
         add(e){
+            //校验数据
             if(!this.title.trim()) return alert('输入不能为空')
+            //将用户的输入包装成一个matter对象
             const matterObj = {id:nanoid(),title:e.target.value,done:false}
+            //通知App组件去添加一个matter对象
             this.addMatter(matterObj)
+            //清空输入
             this.title=''
         }
     },
