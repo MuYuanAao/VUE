@@ -3,7 +3,7 @@
   <div class="todo-container">
     <div class="todo-wrap">
       <UserHeader @addMatter="addMatter"/>
-      <UserList :matters="matters" checkMatter="checkMatter" deleteMatter="deleteMatter"/>
+      <UserList :matters="matters" :checkMatter="checkMatter" :deleteMatter="deleteMatter"/>
       <UserFooter :matters="matters" @checkAllMatter="checkAllMatter" @clearAllmatter="clearAllmatter"/>
     </div>
   </div>
