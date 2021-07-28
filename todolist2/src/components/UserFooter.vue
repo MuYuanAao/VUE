@@ -14,7 +14,7 @@
 <script>
 export default {
     name:'UserFooter',
-    props:['matters','checkAllMatter','clearAllmatter'],
+    props:['matters'],
     computed:{
       //总数
       total(){
@@ -39,7 +39,7 @@ export default {
         },
         //isAll被修改时set被调用
         set(value){
-          this.checkAllMatter(value)
+          this.$emit('checkAllMatter',value)
         }
       },
     },
@@ -50,7 +50,7 @@ export default {
       // },
       //清楚所有已完成
       clearAll(){
-        this.clearAllmatter()
+        this.$emit('clearAllmatter')
       }
     },
 }
